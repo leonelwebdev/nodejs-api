@@ -1,13 +1,13 @@
 {
   "name": "view-engines-practice",
   "version": "1.0.0",
-  "description": "",
+  "description": "NodeJS - Express - MongoDB",
   "main": "index.js",
   "scripts": {
     "start": "node server/index",
     "dev": "nodemon server/index"
   },
-  "author": "",
+  "author": "Leonel Rodriguez",
   "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",
