@@ -2,11 +2,11 @@
 const mongoose = require('mongoose')
 
 // Model
-const whateverSchema = new mongoose.Schema({
+const articleSchema = new mongoose.Schema({
     id: { type: Number, required: true },
     name: { type: String, required: true },
-    date_created: { type: Date, default: Date.now() }
+    author: { type: String, required: true }
 })
 
 // Export
-module.exports = mongoose.model('Whatever', whateverSchema)
+module.exports = mongoose.model('Article', articleSchema)

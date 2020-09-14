@@ -4,6 +4,8 @@ const app = express()
 const path = require('path')
 const cors = require('cors')
 const PORT = process.env.PORT || 3000
+const mongoose = require('./server')
+require('dotenv').config()
 
 // Middlewares
 app.use(express.json())
@@ -16,5 +18,5 @@ app.set('view engine', 'pug')
 
 // Start server
 app.listen(PORT, () => {
-    console.log(`Server running on ${PORT}`)
+    console.log(`Server running on port ${PORT}`)
 })

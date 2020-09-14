@@ -1,12 +1,13 @@
 // Requires
 const router = require('express').Router()
-const controller = require('../controllers/controller')
+const controller = require('../controllers/articleController')
 
 // Routes
-router.get('/names', controller.getNames)
-router.get('/secondnames', controller.getSecondNames)
-router.get('/lastnames', controller.getLastnames)
-router.get('/', controller.getIndexView)
+router.get('/articles', controller.getArticles)
+router.get('/articles/:id', controller.getArticle)
+router.post('/articles', controller.createArticle)
+router.patch('/articles/:id', controller.updateArticle)
+router.delete('/articles/:id', controller.deleteArticle)
 
 // Export
 module.exports = router
