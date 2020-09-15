@@ -25,7 +25,7 @@ controller.createArticle = async (req, res) => {
     try {
        const article = await new Article(req.body)
        article.save()
-       res.status(200).json(article)
+       res.status(201).json(article)
     } catch (err) {
         res.status(400).send({ message: err.message })
     }

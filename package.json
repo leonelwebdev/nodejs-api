@@ -1,5 +1,5 @@
 {
-  "name": "view-engines-practice",
+  "name": "nodejs-api",
   "version": "1.0.0",
   "description": "NodeJS - Express - MongoDB",
   "main": "index.js",

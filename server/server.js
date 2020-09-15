@@ -1,7 +1,7 @@
 // Requires / Consts
 require('dotenv').config()
 const mongoose = require('mongoose')
-const DB_URI = process.env.DB_URI
+const DB_URI = process.env.DB_URI || 'mongodb://localhost/articles'
 
 // Server connection
 mongoose.connect(DB_URI, {
