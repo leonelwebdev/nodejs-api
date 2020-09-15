@@ -1,4 +1,4 @@
-// Requires
+// Requires / Consts
 const mongoose = require('mongoose')
 
 // Model

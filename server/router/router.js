@@ -1,4 +1,4 @@
-// Requires
+// Requires / Consts
 const router = require('express').Router()
 const controller = require('../controllers/articleController')
 

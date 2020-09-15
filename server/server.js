@@ -1,9 +1,14 @@
-// Requires
+// Requires / Consts
+require('dotenv').config()
 const mongoose = require('mongoose')
-const DB_URI = 'mongodb://localhost:27017/articles'
+const DB_URI = process.env.DB_URI
 
-// Server
-mongoose.connect(DB_URI, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false }, () => {
+// Server connection
+mongoose.connect(DB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false },
+    () => {
     try {
         console.log('DB connection completed')
     } catch (err) {

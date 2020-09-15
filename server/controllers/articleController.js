@@ -1,4 +1,4 @@
-// Controller
+// Requires / Consts
 const controller = { }
 const Article = require('../models/Article')
 
