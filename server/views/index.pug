@@ -1,0 +1,26 @@
+extends layout
+
+block li
+    li.nav-item.active
+        a(class="nav-link" href="/articles") Articles
+    li.nav-item
+        a(class="nav-link" href="/api") Documentation
+    li.nav-item
+        a(class="nav-link" href="/about") About
+
+block content
+    div.container.mt-4
+        - const artStyles = 'list-style:none'
+        div(style=artStyles)
+            for article in articles
+                h3(class="font-weight-bold text-info")= `${ article.name }`
+                p.text-justify.mt-4= `${ article.content }`
+                a(class="btn btn-secondary text-white" href=`articles/${ article.id }`) More details
+                hr
+
+
+block footer
+    footer(class="site-footer font-small text-white bg-dark pt-4 pb-4 mt-5" style=footerStyle)
+        div(class="footer-copyright text-center py-2") © 2020 Copyright LeonelDev
+        div(class="footer-copyright text-center py-2")
+            a(target="_blank" href="https://github.com/leonelwebdev") GitHub Repositories

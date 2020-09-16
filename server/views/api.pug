@@ -1,0 +1,121 @@
+extends layout
+
+block li
+    li.nav-item
+        a(class="nav-link" href="/articles") Articles
+    li.nav-item.active
+        a(class="nav-link" href="/api") Documentation
+    li.nav-item
+        a(class="nav-link" href="/about") About
+
+block content
+    div.container
+        p(class="text-justify").
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi, dolorem sit id dicta quod atque officiis debitis
+            rem, dolor rerum placeat odio aliquid, sed quae voluptatem
+            adipisci assumenda magni. Commodi quos beatae deleniti,
+            libero eius ex recusandae aut minima veniam omnis accusamus 
+            corrupti quaerat eos porro laborum? Fuga beatae nisi 
+            vel nesciunt repellendus at, labore quo laborum sit 
+            totam et velit quisquam, dolores rem eveniet odit error 
+            sequi! Maxime exercitationem veritatis maiores dolorem 
+            reprehenderit recusandae atque, accusantium nostrum, 
+            vel molestiae ipsa repellat natus expedita vitae! Ex 
+            ut molestiae, corporis distinctio praesentium 
+            exercitationem aperiam atque, aliquam obcaecati, 
+            dolores molestias ad! Esse.
+
+        hr.mt-4
+
+        h1.brand-logo.text-center.text-dark.mt-3.mb-4 Endpoints
+        h3.text-secondary All articles
+        a(href="/api/articles") Here
+
+
+        h3.text-secondary.mt-4 One article per id
+        for article in articles
+            a(href=`/api/articles/${article.id}`)= `Article ${article.id} Here`
+            br
+        hr.mt-4
+
+        h1.brand-logo.text-center.text-dark.mt-3.mb-4 Authentication
+        p(class="text-justify").
+            Fuga beatae nisi 
+            vel nesciunt repellendus at, labore quo laborum sit 
+            totam et velit quisquam, dolores rem eveniet odit error 
+            sequi! Maxime exercitationem veritatis maiores dolorem 
+            reprehenderit recusandae atque, accusantium nostrum, 
+            vel molestiae ipsa repellat natus expedita vitae! Ex 
+            ut molestiae, corporis distinctio praesentium 
+            exercitationem aperiam atque, aliquam obcaecati, 
+            dolores molestias ad! Esse.
+
+        br
+
+        p(class="text-justify").
+            Dolor rerum placeat odio aliquid, sed quae voluptatem
+            adipisci assumenda magni. Commodi quos beatae deleniti,
+            libero eius ex recusandae aut minima veniam omnis accusamus 
+            corrupti quaerat eos porro laborum? Fuga beatae nisi 
+            vel nesciunt repellendus at, labore quo laborum sit 
+            totam et velit quisquam, dolores rem eveniet odit error 
+            sequi! Maxime exercitationem veritatis maiores.
+
+        hr.mt-4
+
+        h1.brand-logo.text-center.text-dark.mt-3.mb-4 Handling Errors
+        p(class="text-justify").
+            Fuga beatae nisi 
+            vel nesciunt repellendus at, labore quo laborum sit 
+            totam et velit quisquam, dolores rem eveniet odit error 
+            sequi! Maxime exercitationem veritatis maiores dolorem 
+            reprehenderit recusandae atque, accusantium nostrum, 
+            vel molestiae ipsa repellat natus expedita vitae! Ex 
+            ut molestiae, corporis distinctio praesentium 
+            exercitationem aperiam atque, aliquam obcaecati, 
+            dolores molestias ad! Esse.
+
+        hr.mt-4
+
+        h1.brand-logo.text-center.text-dark.mt-3.mb-4 Pagination
+        p(class="text-justify").
+            Fuga beatae nisi 
+            vel nesciunt repellendus at, labore quo laborum sit 
+            totam et velit quisquam, dolores rem eveniet odit error 
+            sequi! Maxime exercitationem veritatis maiores dolorem 
+            reprehenderit recusandae atque, accusantium nostrum, 
+            vel molestiae ipsa repellat natus expedita vitae! Ex 
+            ut molestiae, corporis distinctio praesentium 
+            exercitationem aperiam atque, aliquam obcaecati, 
+            dolores molestias ad! Esse.
+        
+        br
+
+        p(class="text-justify").
+            Dolor rerum placeat odio aliquid, sed quae voluptatem
+            adipisci assumenda magni. Commodi quos beatae deleniti,
+            libero eius ex recusandae aut minima veniam omnis accusamus 
+            corrupti quaerat eos porro laborum? Fuga beatae nisi 
+            vel nesciunt repellendus at, labore quo laborum sit 
+            totam et velit quisquam, dolores rem eveniet odit error 
+            sequi! Maxime exercitationem veritatis maiores.
+
+        br
+        
+        p(class="text-justify").
+            Dolor rerum placeat odio aliquid, sed quae voluptatem
+            adipisci assumenda magni. Commodi quos beatae deleniti,
+            libero eius ex recusandae aut minima veniam omnis accusamus 
+            corrupti quaerat eos porro laborum? Fuga beatae nisi 
+            vel nesciunt repellendus at, labore quo laborum sit 
+            totam et velit quisquam, dolores rem eveniet odit error 
+            sequi! Maxime exercitationem veritatis maiores.
+
+        hr.mt-4
+
+block footer    
+    footer(class="site-footer font-small text-white bg-dark pt-4 pb-4 mt-5" style=footerStyle)
+        div(class="footer-copyright text-center py-2") © 2020 Copyright LeonelDev
+        div(class="footer-copyright text-center py-2")
+            a(target="_blank" href="https://github.com/leonelwebdev") GitHub Repositories

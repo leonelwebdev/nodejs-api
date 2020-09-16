@@ -1,0 +1,21 @@
+extends layout
+
+block li
+    li.nav-item
+        a(class="nav-link" href="/articles") Articles
+    li.nav-item
+        a(class="nav-link" href="/api") Documentation
+    li.nav-item
+        a(class="nav-link" href="/about") About
+
+block content
+    h1.text-center.text-dark.mt-4= article.name
+    hr
+    div.container.mt-4
+        h3.text-secondary.mb-5= `Writed by ${article.author}`
+        - const artStyles = 'list-style:none'
+        div(style=artStyles)
+            p.text-justify.mt-4= article.content
+        hr
+        h3.text-center.text-dark.mt-4 Author's information
+        p.mt-4.text-justify= `${article.author} - ${ article.authorInfo }`

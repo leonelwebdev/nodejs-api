@@ -5,7 +5,9 @@ const mongoose = require('mongoose')
 const articleSchema = new mongoose.Schema({
     id: { type: Number, required: true },
     name: { type: String, required: true },
-    author: { type: String, required: true }
+    author: { type: String, required: true },
+    authorInfo: { type: String, required: true },
+    content: { type: String, required: true }
 })
 
 // Export

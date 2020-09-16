@@ -1,9 +1,9 @@
 // Requires / Consts
-const controller = { }
+const articleController = { }
 const Article = require('../models/Article')
 
 // Functions
-controller.getArticles = async (req, res) => {
+articleController.getArticles = async (req, res) => {
     try {
         const articles = await Article.find()
         res.status(200).json(articles)
@@ -12,7 +12,7 @@ controller.getArticles = async (req, res) => {
     }
 }
 
-controller.getArticle = async (req, res) => {
+articleController.getArticle = async (req, res) => {
     try {
         const article = await Article.find({id: req.params.id})
         res.status(200).json(article)
@@ -21,7 +21,7 @@ controller.getArticle = async (req, res) => {
     }
 }
 
-controller.createArticle = async (req, res) => {
+articleController.createArticle = async (req, res) => {
     try {
        const article = await new Article(req.body)
        article.save()
@@ -31,7 +31,7 @@ controller.createArticle = async (req, res) => {
     }
 }
 
-controller.updateArticle = async (req, res) => {
+articleController.updateArticle = async (req, res) => {
     try {
         const article = (req.body)
         await Article.findOneAndUpdate({id: req.params.id}, {$set: article}, {new: true})
@@ -41,7 +41,7 @@ controller.updateArticle = async (req, res) => {
     }
 }
 
-controller.deleteArticle = async (req, res) => {
+articleController.deleteArticle = async (req, res) => {
     try {
         const article = await Article.findOneAndRemove({id: req.params.id})
         res.status(200).json(article)
@@ -51,4 +51,4 @@ controller.deleteArticle = async (req, res) => {
 }
 
 // Export
-module.exports = controller
+module.exports = articleController
