@@ -8,7 +8,7 @@ html
         script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js")
         title Articles API
     body
-        nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+        nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.fixed-top
             div.container
                 a(class="navbar-brand" href="/" style="margin-right: 8%") API
                 button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation")
@@ -16,7 +16,8 @@ html
                 div(class="collapse navbar-collapse" id="navbarNav")
                     ul.navbar-nav
                         block li
-        h1.text-center.text-dark.mt-4 #{title}
-        hr
-        block content
-        block footer
+        div(style="margin-top: 4.2em;")
+            h1.text-center.text-dark.mt-4 #{title}
+            hr
+            block content
+            block footer
