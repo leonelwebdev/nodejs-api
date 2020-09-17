@@ -19,3 +19,15 @@ block content
         hr
         h3.text-center.text-dark.mt-4 Author's information
         p.mt-4.text-justify= `${article.author} - ${ article.authorInfo }`
+        hr
+
+        - const deleteURL = `/api/articles/${article.id}`
+        a.deleteArticle.btn.btn-danger.mt-5.mb-5.text-white(name=deleteURL href="/articles") Delete
+
+        script.
+            const deleteArticle = document.querySelector('.deleteArticle')
+            deleteArticle.addEventListener('click', async () => {
+                const res = await fetch(deleteArticle.getAttribute('name'), {
+                    method: 'DELETE'
+                })
+            })
