@@ -1,5 +1,5 @@
 {
-  "name": "nodejs-api",
+  "name": "articles-api",
   "version": "1.0.0",
   "description": "NodeJS - Express - MongoDB",
   "main": "index.js",
