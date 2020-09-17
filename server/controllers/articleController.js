@@ -30,7 +30,6 @@ articleController.createArticle = async (req, res) => {
        article.id = (lastArticleId + 1)
        article.save()
 
-       res.redirect('/articles')
        res.status(201).json(article)
        return
     } catch (err) {
