@@ -6,7 +6,7 @@ const Article = require('../models/Article')
 viewsController.getArticlesView = async (req, res) => {
     try {
         const articles = await Article.find()
-        res.render('index', { articles: articles, title: 'Articles' })
+        res.render('index', { articles: articles, title: 'Add an article' })
     } catch (err) {
         res.status(400).send({ message: err.message })
     }

@@ -24,8 +24,15 @@ articleController.getArticle = async (req, res) => {
 articleController.createArticle = async (req, res) => {
     try {
        const article = await new Article(req.body)
+       const articles = await Article.find()
+       const lastArticleId = articles.slice(-1)[0].id
+
+       article.id = (lastArticleId + 1)
        article.save()
+
+       res.redirect('/articles')
        res.status(201).json(article)
+       return
     } catch (err) {
         res.status(400).send({ message: err.message })
     }

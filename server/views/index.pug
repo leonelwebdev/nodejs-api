@@ -10,6 +10,28 @@ block li
 
 block content
     div.container.mt-4
+        form.mb-5(action="/api/articles" method="POST")
+            #form-group
+                input.form-control(name="id", type="number" hidden)
+            #form-group
+                label Name:
+                input.form-control(name="name", type="text" required)             
+            #form-group
+                label Author:
+                input.form-control(name="author", type="text" required)        
+            #form-group
+                label Author Info:
+                input.form-control(name="authorInfo", type="text" required)  
+            #form-group
+                label Content:
+                textarea.form-control(name="content", cols="20", rows="5" required) 
+            #form-group
+                br
+                input.form-control.btn.btn-sm.btn-primary(value="Submit", type="submit")
+
+        hr
+        h1.text-center.text-dark Articles
+        hr
         - const artStyles = 'list-style:none'
         div(style=artStyles)
             for article in articles

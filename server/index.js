@@ -13,6 +13,7 @@ app.set('view engine', 'pug')
 
 // Middlewares
 app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
 app.use(cors())
 
 // Routes
